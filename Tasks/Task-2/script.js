@@ -11,6 +11,7 @@ btnName.addEventListener('click', () => {
 const increments = document.getElementById('increments')
 increments.addEventListener('click', () => {
     var number = 3;
+    
     window.alert(`Число после выполнения приращения равняется ${++number}`)
     window.alert(`Число после выполнения приращения равняется ${number--}`)
     window.alert(`Число после выполнения приращения равняется` + -number)
@@ -73,7 +74,7 @@ userData.addEventListener('click',() => {
 const numberMax = document.getElementById('numberMax')
 numberMax.addEventListener('click',() => {
     let num_arr = prompt('Введите числа').split(' ')
-    let result = num_arr.map(string => +string)
+    let result = num_arr.map(value => parseInt(value))
 
-    alert(Math.max(result))
+    alert(Math.max.apply(null,result))
 })
