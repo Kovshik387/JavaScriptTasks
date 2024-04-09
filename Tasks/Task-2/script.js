@@ -78,3 +78,75 @@ numberMax.addEventListener('click',() => {
 
     alert(Math.max.apply(null,result))
 })
+
+const numCase = document.getElementById('numCase')
+numCase.addEventListener('click',() =>{
+    let num_arr = prompt('Введите числа').split(' ')
+    let nums = num_arr.map(value => parseInt(value))
+    
+    if (nums.length > 2 && nums.length < 1){
+        return window.alert("ААААААААА");
+    }
+
+    let fun = prompt('Введите функцию');
+    console.log(fun)
+    switch (fun){
+        case 'умножение':
+            window.alert(nums[0] * nums[1])
+            break;
+        case "деление":
+            window.alert(nums[0] / nums[1])
+            break;
+    }
+})
+
+const fiveNum = document.getElementById('fiveNum')
+fiveNum.addEventListener('click',() =>{
+    let num = window.prompt(`Введите число!`)
+    let arr_num = new Array();
+    for (let i = 1; i < 6;i++){
+        arr_num.push(num*i)
+    }
+    
+    window.alert(arr_num.map(value => value))
+})
+
+const fact = document.getElementById('fact')
+fact.addEventListener('click', () => {    
+    const factorial = (value) => {
+        let result = 1;
+        for (let i = 1; i < value;i++){
+            result*=i;
+        }
+        return result;
+    }
+
+    window.alert(factorial(window.prompt("Введите число")));
+})
+
+const checkName = document.getElementById('checkName')
+checkName.addEventListener('click', () => {
+    let name
+    do {
+        name = window.prompt("Введите имя")
+    }
+    while (name != null && name != 'Никита')
+    
+    let textName = document.createElement('p')
+    textName.innerHTML = (`<strong>${name}</strong>`)
+
+    let text = document.getElementById('bold')
+    text.append(textName)
+})
+
+const printNum = document.getElementById('printNum')
+printNum.addEventListener('click', () => {
+    var num = ''
+    for (let i = 0; i < 11; i++){
+        for (let j = 0; j <= i; j++){
+            num+=j
+        }
+        num+='\n'
+    }
+    window.alert(num)
+})
