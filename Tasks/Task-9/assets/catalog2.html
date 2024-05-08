@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Машина 2</title>
+    <style type="text/css">
+        h1 {
+            font-size: 14px;
+            text-decoration: underline;
+            color: linear-gradient(#e66465, #9198e5);
+        }
+        img {
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>Гоночный порш</h1>
+    <img src="images/porshe.jpg" alt="..."/>
+    <div style="display: inline-block;">
+        <button onclick="back();">Назад</button>
+        <button onclick="next();">Вперед</button>
+    </div>
+    <script type="text/javascript" src="scripts/paths.js" defer></script>
+    <script type="text/javascript">
+        function next(event) {
+            window.location.href = `${getCurrentPath()}/catalog3.html`;
+        }
+        function back(event) { window.history.back(); }
+    </script>
+</body>
+</html>
